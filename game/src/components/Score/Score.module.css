@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  box-shadow: 1px 1px 18px -1px #05829a;
+  border-radius: 70px 25px;
+  padding-left: 50px;
+}
+
+p {
+  font-size: large;
+  font-weight: bolder;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.info {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: medium;
+  font-weight: bold;
+}
+
+.hit {
+  color: rgb(65, 159, 65);
+}
+
+.miss {
+  color: rgb(206, 63, 63);
+}
+
+.left {
+  color: rgb(91, 91, 204);
+}
