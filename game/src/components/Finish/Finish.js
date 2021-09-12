@@ -4,7 +4,7 @@ import {GameContext} from '../../contexts/GameContext';
 
 import styles from './Finish.module.css';
 
-class Finish extends React.Component {
+class Finish extends Component {
   render() {
     return (
       <GameContext.Consumer>
