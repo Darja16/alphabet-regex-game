@@ -1,5 +1,5 @@
 import React, {Component, createContext} from 'react';
-
+import {Redirect} from 'react-router-dom';
 import {setTimer} from '../components/Game/utils';
 
 export const GameContext = createContext();
@@ -25,7 +25,13 @@ class GameContextProvider extends Component {
   };
 
   changeScore = (score) => {
-    this.setState({score});
+    if (score.left >= 0 && score.miss + score.hit <= 26) {
+      this.setState({score});
+    } else {
+      // redirection not working, added alert instead
+      alert('The end!');
+      <Redirect to='/end' />;
+    }
   };
 
   render() {

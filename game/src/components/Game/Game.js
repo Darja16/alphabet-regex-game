@@ -33,6 +33,10 @@ class Game extends Component {
         this.setState({
           display: this.state.shuffledArray[i].number
         });
+        if (i === 26) {
+          // redirection not working, added alert instead
+          alert('There is no time!');
+        }
       }, value.timer * i);
     }
 

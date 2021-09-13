@@ -9,14 +9,14 @@ class Finish extends Component {
     return (
       <GameContext.Consumer>
         {(context) => {
-          const {score} = context;
+          const {score, player} = context;
           const win = score.left ? false : score.hit > score.miss;
           return (
             <div className={styles.container}>
               {win ? (
-                <p style={{color: 'green'}}>Congratulation</p>
+                <p style={{color: 'green'}}>Congratulation {player.name}</p>
               ) : (
-                <p style={{color: 'red'}}>Wish you more luck next time!</p>
+                <p style={{color: 'red'}}>Wish you {player.name} more luck next time!</p>
               )}
             </div>
           );
