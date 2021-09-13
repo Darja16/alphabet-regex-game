@@ -34,9 +34,25 @@ class Game extends Component {
           display: this.state.shuffledArray[i].number
         });
         if (i === 26) {
-          // redirection not working, added alert instead
+          // redirection ne radi..
           alert('There is no time!');
         }
+
+        /*
+          trenutno se ne dobija miss poen kad prodje 5/3.5/2 sekunde
+          pokusala sam addEventListener da dodam ovde i na svaku promenu i 
+          ako nije uneto slovo, da dobijem miss i smanjim left
+
+          medjutim state mi se update-uje mnogo vise puta
+          npr prvi potez, prvi hit
+            hit: 1
+            miss: 0
+            left: 25
+            drugi potez, prvi miss
+            hit: 1
+            miss: 2
+            left: 23
+        */
       }, value.timer * i);
     }
 

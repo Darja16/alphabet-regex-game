@@ -28,7 +28,7 @@ class GameContextProvider extends Component {
     if (score.left >= 0 && score.miss + score.hit <= 26) {
       this.setState({score});
     } else {
-      // redirection not working, added alert instead
+      // redirection ne radi, dodala sam alert umesto toga, zbog preglednosti
       alert('The end!');
       <Redirect to='/end' />;
     }
